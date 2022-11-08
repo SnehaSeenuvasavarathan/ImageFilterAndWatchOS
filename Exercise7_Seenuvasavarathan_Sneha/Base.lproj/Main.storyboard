@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercise7_Seenuvasavarathan_Sneha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="uHa-i1-ReB">
+                                <rect key="frame" x="87" y="230" width="240" height="436"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3yz-pf-gP9">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="iMY-Rb-jw9"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Original"/>
+                                            <segment title="Chrome"/>
+                                            <segment title="Fade"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="applyFilter:" destination="BYZ-38-t0r" eventType="valueChanged" id="BSe-qW-R6c"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wzt-5O-x9O">
+                                        <rect key="frame" x="0.0" y="121" width="240" height="203"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="h8D-wt-tO0">
+                                        <rect key="frame" x="0.0" y="405" width="240" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBR-Ff-6VW">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                                <connections>
+                                                    <action selector="selectCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IWa-HK-g1u"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnv-xl-vTk">
+                                                <rect key="frame" x="69.5" y="0.0" width="51" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="photo.on.rectangle" catalog="system" title=""/>
+                                                <connections>
+                                                    <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Rl-sS-DdE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-QC-rEE">
+                                                <rect key="frame" x="136.5" y="0.0" width="43" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="applewatch.case.inset.filled" catalog="system"/>
+                                                <connections>
+                                                    <action selector="sendToWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3aa-1V-B7m"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDd-5r-M0Z">
+                                                <rect key="frame" x="195.5" y="0.0" width="44.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system"/>
+                                                <connections>
+                                                    <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DN4-Gw-j2g"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uHa-i1-ReB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D6C-aj-l5c"/>
+                            <constraint firstItem="uHa-i1-ReB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FMA-Pa-H6z"/>
+                            <constraint firstItem="uHa-i1-ReB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="186" id="GUi-pI-UDA"/>
+                            <constraint firstItem="uHa-i1-ReB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="OJc-iZ-hUX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView" destination="wzt-5O-x9O" id="1yb-FV-BqR"/>
+                        <outlet property="cameraButton" destination="hBR-Ff-6VW" id="Ays-iB-llK"/>
+                        <outlet property="downloadButton" destination="hDd-5r-M0Z" id="Unb-e5-nob"/>
+                        <outlet property="selectButton" destination="pnv-xl-vTk" id="T8J-XW-Lp6"/>
+                        <outlet property="watchButton" destination="Y6c-QC-rEE" id="jLc-Vm-M26"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="66.964285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="applewatch.case.inset.filled" catalog="system" width="128" height="128"/>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="97"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
