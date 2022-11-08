@@ -12,15 +12,15 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercise7_Seenuvasavarathan_Sneha" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="uHa-i1-ReB">
-                                <rect key="frame" x="87" y="230" width="240" height="436"/>
+                                <rect key="frame" x="87" y="230" width="208" height="436"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3yz-pf-gP9">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="iMY-Rb-jw9"/>
                                         </constraints>
@@ -34,37 +34,53 @@
                                         </connections>
                                     </segmentedControl>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wzt-5O-x9O">
-                                        <rect key="frame" x="0.0" y="121" width="240" height="203"/>
+                                        <rect key="frame" x="0.0" y="121" width="208" height="194"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="h8D-wt-tO0">
-                                        <rect key="frame" x="0.0" y="405" width="240" height="31"/>
+                                        <rect key="frame" x="0.0" y="396" width="208" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBR-Ff-6VW">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="31"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBR-Ff-6VW">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="dlK-m7-qXd"/>
+                                                    <constraint firstAttribute="width" constant="40" id="kTs-Cq-YEj"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
                                                 <connections>
                                                     <action selector="selectCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IWa-HK-g1u"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnv-xl-vTk">
-                                                <rect key="frame" x="69.5" y="0.0" width="51" height="31"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnv-xl-vTk">
+                                                <rect key="frame" x="56" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="9OI-1f-X2D"/>
+                                                    <constraint firstAttribute="height" constant="40" id="mZb-Eg-8Rm"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="photo.on.rectangle" catalog="system" title=""/>
                                                 <connections>
                                                     <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Rl-sS-DdE"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-QC-rEE">
-                                                <rect key="frame" x="136.5" y="0.0" width="43" height="31"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-QC-rEE">
+                                                <rect key="frame" x="112" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Gy7-TY-DA9"/>
+                                                    <constraint firstAttribute="height" constant="40" id="fFb-E0-vVU"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="applewatch.case.inset.filled" catalog="system"/>
                                                 <connections>
                                                     <action selector="sendToWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3aa-1V-B7m"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDd-5r-M0Z">
-                                                <rect key="frame" x="195.5" y="0.0" width="44.5" height="31"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDd-5r-M0Z">
+                                                <rect key="frame" x="168" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="995-BJ-DSE"/>
+                                                    <constraint firstAttribute="height" constant="40" id="FOV-bD-hmk"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system"/>
                                                 <connections>

@@ -6,8 +6,33 @@
 //
 
 import UIKit
+import WatchConnectivity
+import Foundation
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+extension UIImage {
+    
+    func resizeImageTo(size: CGSize) -> UIImage? {
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        self.draw(in: CGRect(origin: CGPoint.zero, size: size))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return resizedImage
+    }
+}
+
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, WCSessionDelegate  {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+            
+        }
+        
+        func sessionDidBecomeInactive(_ session: WCSession) {
+            
+        }
+        
+        func sessionDidDeactivate(_ session: WCSession) {
+            
+        }
     
     @IBOutlet weak var ImageView: UIImageView!
     
@@ -40,6 +65,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         watchButton.contentHorizontalAlignment = .fill
         cameraButton.contentVerticalAlignment = .fill
         cameraButton.contentHorizontalAlignment = .fill
+        if WCSession.isSupported(){
+                    let session = WCSession.default
+                    session.delegate = self
+                    session.activate()
+                }
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             
@@ -109,6 +139,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func sendToWatch(_ sender: Any) {
+        let date = Date()
+
+                // Create Date Formatter
+                let dateFormatter = DateFormatter()
+
+                // Set Date Format
+                dateFormatter.dateFormat = "hh:mm:ss"
+
+                // Convert Date to String
+                
+                var preprocessed_img = self.ImageView.image!.resizeImageTo(size: CGSize(width: 45.00, height: 45.00))
+                var img = preprocessed_img!.pngData()!
+               
+                
+                let message = ["message": "Got at \(dateFormatter.string(from: date))"]
+                
+                if WCSession.default.isReachable {
+                     
+                    WCSession.default.sendMessage(message, replyHandler: nil){ (error) in
+                        print(error.localizedDescription)
+                    }
+                    
+                    WCSession.default.sendMessageData(img, replyHandler: nil){ (error) in
+                        print(error.localizedDescription)
+                    }
+                }
         
     }
     
